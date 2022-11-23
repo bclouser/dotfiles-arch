@@ -18,22 +18,26 @@ alias k=kubectl
 
 # Golang stuff
 export GOPATH="/opt/go"
-export GOPRIVATE="*.int.toradex.com"
+export GOPRIVATE="*.int.toradex.com,gitlab.com/torizon-platform"
 
 
 # Added this for intellij idea... but it seems to be useful for java things
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # For terraform
-export VAULT_ADDR=https://vault-dev.int.toradex.com
+export VAULT_ADDR=https://vault.infra.torizon.io
 
 # For tptf
 export VAULT_PUBLIC_KEY_PATH="$HOME/.tptf/kong-credentials/api-testing-keys/public.pem"
 export VAULT_PRIVATE_KEY_PATH="$HOME/.tptf/kong-credentials/api-testing-keys/private.pem"
-export JWT_UTIL_DIR="$HOME/workspace/toradex/ota/jwt-util"
+export JWT_UTIL_DIR="$HOME/workspace/toradex/ota/golang/jwt-util"
 
 # Grim for capturing screenshots
 GRIM_DEFAULT_DIR=$HOME/screenshots
+
+
+# for ssh-agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 export PATH=$PATH:/opt/go/bin
 . "$HOME/.cargo/env"
